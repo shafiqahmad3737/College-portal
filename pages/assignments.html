@@ -1,0 +1,50 @@
+<section class="page-section active" id="assignments">
+    <div class="section-header">
+        <div><h2 id="assignmentsHeading">My Assignments</h2><p id="assignmentsDescription">Track your coursework and due dates.</p></div>
+        <button type="button" class="primary-btn staff-assignment-only" id="addAssignmentBtn" hidden>+ Add Assignment</button>
+    </div>
+
+    <div class="assignment-toolbar">
+        <label class="assignment-search-label" for="assignmentSearch">Search assignments</label>
+        <input id="assignmentSearch" class="search-input" type="search" placeholder="Search by title or course">
+        <label class="assignment-filter-label" for="assignmentStatusFilter">Status</label>
+        <select id="assignmentStatusFilter" class="filter-select">
+            <option value="all">All statuses</option>
+            <option value="Pending">Pending</option>
+            <option value="Overdue">Overdue</option>
+            <option value="Submitted">Submitted</option>
+        </select>
+    </div>
+
+    <div id="assignmentGrid" class="assignment-grid" aria-live="polite"></div>
+    <div id="assignmentEmptyState" class="card assignment-empty-state" hidden>
+        <h3>No assignments found</h3>
+        <p>Try changing your search or status filter.</p>
+    </div>
+
+    <div class="modal-overlay" id="assignmentDetailsModal" role="dialog" aria-modal="true" aria-labelledby="assignmentDetailsTitle">
+        <div class="modal assignment-details-modal">
+            <div class="modal-header"><h2 id="assignmentDetailsTitle">Assignment Details</h2><button type="button" data-close-modal="assignmentDetailsModal" aria-label="Close assignment details">×</button></div>
+            <div id="assignmentDetailsContent"></div>
+            <div class="modal-actions"><button type="button" class="secondary-btn" data-close-modal="assignmentDetailsModal">Close</button></div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="assignmentFormModal" role="dialog" aria-modal="true" aria-labelledby="assignmentFormTitle">
+        <div class="modal assignment-form-modal">
+            <div class="modal-header"><h2 id="assignmentFormTitle">Add Assignment</h2><button type="button" data-close-modal="assignmentFormModal" aria-label="Close assignment form">×</button></div>
+            <form id="assignmentForm">
+                <input type="hidden" id="assignmentEditId">
+                <div class="form-grid">
+                    <div class="form-group"><label for="assignmentCourse">Course</label><select id="assignmentCourse" required></select></div>
+                    <div class="form-group"><label for="assignmentTitle">Title</label><input id="assignmentTitle" maxlength="100" required></div>
+                    <div class="form-group"><label for="assignmentIssueDate">Issue date</label><input id="assignmentIssueDate" type="date" required></div>
+                    <div class="form-group"><label for="assignmentDueDate">Due date</label><input id="assignmentDueDate" type="date" required></div>
+                    <div class="form-group"><label for="assignmentMarks">Maximum marks</label><input id="assignmentMarks" type="number" min="1" max="1000" step="1" required></div>
+                    <div class="form-group assignment-description-field"><label for="assignmentDescription">Description</label><textarea id="assignmentDescription" rows="3" maxlength="1000" required></textarea></div>
+                </div>
+                <div class="modal-actions"><button type="button" class="secondary-btn" data-close-modal="assignmentFormModal">Cancel</button><button type="submit" class="primary-btn">Save Assignment</button></div>
+            </form>
+        </div>
+    </div>
+</section>

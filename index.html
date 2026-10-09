@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Portal - Login</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+
+<div class="login-wrapper">
+    <div class="login-brand">
+        <div class="logo-icon large">CP</div>
+        <h1>College Portal</h1>
+        <p>Academic Management System</p>
+    </div>
+
+    <div class="login-card">
+        <div class="login-heading">
+            <h2>Welcome back</h2>
+            <p>Sign in to continue to your portal.</p>
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="loginUsername">Username</label>
+                <input id="loginUsername" type="text" autocomplete="username" placeholder="Enter username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Enter password" required>
+            </div>
+
+            <div id="loginError" class="form-error"></div>
+
+            <button class="primary-btn full-btn" type="submit">Sign In</button>
+        </form>
+
+        <div class="demo-accounts">
+            <strong>Demo accounts</strong>
+            <span>Admin: admin / admin123</span>
+            <span>Faculty: faculty / faculty123</span>
+            <span>Student: student / student123</span>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

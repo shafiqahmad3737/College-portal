@@ -1,0 +1,15 @@
+# Downloaded installers
+*.msi
+*.exe
+
+# Local environment and editor files
+.env
+.env.*
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp

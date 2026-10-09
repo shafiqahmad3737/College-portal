@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+<aside class="sidebar" id="sidebar">
+    <div class="logo">
+        <div class="logo-icon">CP</div>
+        <div>
+            <h2>College</h2>
+            <span>Portal</span>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <p class="nav-title">MAIN</p>
+
+        <button class="nav-item active" data-section="dashboard"><span>▦</span>Dashboard</button>
+        <button class="nav-item" data-section="students"><span>👨‍🎓</span>Students</button>
+        <button class="nav-item" data-section="faculty"><span>👨‍🏫</span>Faculty</button>
+        <button class="nav-item" data-section="courses"><span>📚</span>Courses</button>
+        <button class="nav-item" data-section="attendance"><span>✓</span>Attendance</button>
+        <button class="nav-item" data-section="timetable"><span>🕒</span>Timetable</button>
+
+        <p class="nav-title">ACADEMIC</p>
+
+        <button class="nav-item" data-section="assignments"><span>📝</span>Assignments</button>
+        <button class="nav-item" data-section="results"><span>📊</span>Results</button>
+        <button class="nav-item" data-section="fees"><span>💳</span>Fees</button>
+        <button class="nav-item" data-section="notices"><span>📢</span>Notices</button>
+
+        <p class="nav-title">SYSTEM</p>
+
+        <button class="nav-item" data-section="profile"><span>👤</span>Profile</button>
+        <button class="nav-item" data-section="settings"><span>⚙</span>Settings</button>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <button id="logoutBtn" class="logout-btn">⇥ Logout</button>
+    </div>
+</aside>
+
+<main class="main">
+    <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div class="page-heading">
+            <h1 id="pageTitle">Dashboard</h1>
+            <p id="pageSubtitle">Welcome back to your college portal.</p>
+        </div>
+
+        <div class="topbar-actions">
+            <button class="icon-btn" id="themeBtn" title="Toggle theme">☀</button>
+            <button class="icon-btn notification-btn" title="Notifications">
+                🔔 <span class="notification-dot"></span>
+            </button>
+
+            <div class="user-profile">
+                <div class="avatar" id="topAvatar">SA</div>
+                <div class="user-info">
+                    <strong id="topUserName">Shafiq Ahmad</strong>
+                    <span id="topUserRole">Student</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content" id="pageContent"></div>
+</main>
+
+</div>
+
+<div id="toastContainer" class="toast-container"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

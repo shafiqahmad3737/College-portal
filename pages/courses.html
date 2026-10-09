@@ -1,0 +1,57 @@
+<section class="page-section active" id="courses">
+    <div class="section-header">
+        <div>
+            <h2 id="coursesHeading">My Courses</h2>
+            <p id="coursesDescription">Your active courses for this semester.</p>
+        </div>
+        <div class="course-actions">
+            <div><label class="course-search-label" for="courseSearch">Search courses</label>
+            <input id="courseSearch" class="search-input course-search" type="search" placeholder="Course, code, or instructor"></div>
+            <button type="button" class="primary-btn admin-only" id="addCourseBtn">+ Add Course</button>
+        </div>
+    </div>
+
+    <div class="course-summary">
+        <div class="course-summary-card"><span>Courses shown</span><strong id="courseCount">0</strong></div>
+        <div class="course-summary-card"><span>Credit hours</span><strong id="courseCredits">0</strong></div>
+        <div class="course-summary-card"><span>Semester</span><strong id="courseSemester">—</strong></div>
+    </div>
+
+    <div id="courseGrid" class="course-grid" aria-live="polite"></div>
+    <div id="courseEmptyState" class="card course-empty-state" hidden>
+        <h3>No courses found</h3>
+        <p>Try another search, or check back when courses are available for your semester.</p>
+    </div>
+
+    <div class="modal-overlay" id="courseFormModal" role="dialog" aria-modal="true" aria-labelledby="courseFormTitle">
+        <div class="modal">
+            <div class="modal-header"><h2 id="courseFormTitle">Add Course</h2><button type="button" data-close-modal="courseFormModal" aria-label="Close course form">×</button></div>
+            <form id="courseForm">
+                <input type="hidden" id="editCourseIndex">
+                <div class="form-grid">
+                    <div class="form-group"><label for="courseCode">Course Code</label><input id="courseCode" maxlength="50" required></div>
+                    <div class="form-group"><label for="courseName">Course Name</label><input id="courseName" maxlength="160" required></div>
+                    <div class="form-group"><label for="courseTeacher">Instructor</label><input id="courseTeacher" maxlength="120" required></div>
+                    <div class="form-group"><label for="courseCreditsInput">Credits</label><input id="courseCreditsInput" type="number" min="1" max="30" step="1" required></div>
+                    <div class="form-group"><label for="courseDepartment">Department</label><input id="courseDepartment" maxlength="100" required></div>
+                    <div class="form-group"><label for="courseSemesterInput">Semester</label><select id="courseSemesterInput" required><option>1st</option><option>2nd</option><option>3rd</option><option>4th</option><option>5th</option><option>6th</option><option>7th</option><option>8th</option></select></div>
+                    <div class="form-group"><label for="courseStatus">Status</label><select id="courseStatus"><option>Active</option><option>Inactive</option></select></div>
+                </div>
+                <div class="modal-actions"><button type="button" class="secondary-btn" data-close-modal="courseFormModal">Cancel</button><button class="primary-btn" type="submit">Save Course</button></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="courseDetailsModal" role="dialog" aria-modal="true" aria-labelledby="courseDetailsTitle">
+        <div class="modal course-details-modal">
+            <div class="modal-header">
+                <h2 id="courseDetailsTitle">Course details</h2>
+                <button type="button" data-close-modal="courseDetailsModal" aria-label="Close course details">×</button>
+            </div>
+            <div id="courseDetailsContent"></div>
+            <div class="modal-actions">
+                <button type="button" class="secondary-btn" data-close-modal="courseDetailsModal">Close</button>
+            </div>
+        </div>
+    </div>
+</section>

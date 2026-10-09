@@ -1,0 +1,63 @@
+<section class="page-section active" id="dashboard">
+    <div class="welcome-card">
+        <div>
+            <p class="small-label">COLLEGE PORTAL</p>
+            <h2>Good day, <span id="dashboardUserName">Student</span>!</h2>
+            <p id="dashboardIntro">Your academic overview and latest updates.</p>
+        </div>
+        <div class="welcome-icon" aria-hidden="true">🎓</div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon blue" aria-hidden="true">📚</div>
+            <div><span id="dashboardStat1Label">Total Courses</span><h3 id="dashboardStat1">0</h3><small id="dashboardStat1Note">Current semester</small></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon green" aria-hidden="true">✓</div>
+            <div><span id="dashboardStat2Label">Attendance</span><h3 id="dashboardStat2">0%</h3><small id="dashboardStat2Note">Across your courses</small></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon purple" aria-hidden="true">📊</div>
+            <div><span id="dashboardStat3Label">Current CGPA</span><h3 id="dashboardStat3">—</h3><small id="dashboardStat3Note">Out of 4.00</small></div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon orange" aria-hidden="true">📝</div>
+            <div><span id="dashboardStat4Label">Pending Assignments</span><h3 id="dashboardStat4">0</h3><small id="dashboardStat4Note">Awaiting submission</small></div>
+        </div>
+    </div>
+
+    <div class="dashboard-quick-actions card">
+        <div class="card-header"><div><h3>Quick actions</h3><p>Go straight to your academic information.</p></div></div>
+        <div id="dashboardQuickActions" class="quick-action-list"></div>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="card">
+            <div class="card-header"><div><h3>Today's Classes</h3><p id="classScheduleDate">Your schedule for today</p></div><button class="text-btn" data-section-link="timetable">View timetable</button></div>
+            <div id="todayClasses" class="class-list"></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><div><h3>Upcoming Deadlines</h3><p>Assignments that still need your attention.</p></div><button class="text-btn" data-section-link="assignments">View assignments</button></div>
+            <div id="dashboardDeadlines" class="dashboard-list"></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><div><h3>Academic Overview</h3><p>Attendance by course.</p></div><button class="text-btn" data-section-link="attendance">View attendance</button></div>
+            <div id="dashboardAttendance" class="dashboard-attendance"></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><div><h3>Important Notices</h3><p>Latest college announcements.</p></div><button class="text-btn" data-section-link="notices">View all</button></div>
+            <div id="recentNotices" class="dashboard-list"></div>
+        </div>
+    </div>
+
+    <div id="dashboardStudentSummary" class="card dashboard-student-summary">
+        <div class="card-header"><div><h3>Student Information</h3><p>Your current academic profile.</p></div><button class="text-btn" data-section-link="profile">View profile</button></div>
+        <div class="dashboard-profile-details">
+            <div><span>Student ID</span><strong id="dashboardStudentId">—</strong></div>
+            <div><span>Department</span><strong id="dashboardDepartment">—</strong></div>
+            <div><span>Semester</span><strong id="dashboardSemester">—</strong></div>
+            <div><span>Enrolled Courses</span><strong id="dashboardCourseCount">0</strong></div>
+        </div>
+    </div>
+</section>

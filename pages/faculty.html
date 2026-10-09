@@ -1,0 +1,32 @@
+<section class="page-section active" id="faculty">
+    <div class="section-header">
+        <div>
+            <h2>Faculty</h2>
+            <p>College teaching staff.</p>
+        </div>
+    </div>
+
+    <div class="table-actions faculty-toolbar">
+        <input id="facultySearch" class="search-input" type="text" placeholder="Search faculty">
+        <select id="facultyDepartment" class="filter-select">
+            <option value="All">All departments</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="English">English</option>
+        </select>
+    </div>
+
+    <div class="faculty-grid" id="facultyGrid"></div>
+
+    <div class="modal-overlay" id="facultyDetailsModal" role="dialog" aria-modal="true" aria-labelledby="facultyDetailsTitle">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="facultyDetailsTitle">Faculty Details</h2>
+                <button type="button" data-close-modal="facultyDetailsModal" aria-label="Close faculty details">×</button>
+            </div>
+            <div id="facultyDetailsContent" class="faculty-details-content"></div>
+        </div>
+    </div>
+</section>

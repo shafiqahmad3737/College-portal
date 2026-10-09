@@ -1,0 +1,67 @@
+<section class="page-section active" id="attendance">
+    <div class="section-header">
+        <div>
+            <h2 id="attendanceHeading">My Attendance</h2>
+            <p id="attendanceDescription">Review your attendance for this semester.</p>
+        </div>
+    </div>
+
+    <div id="attendanceStaffControls" class="attendance-controls" hidden>
+        <label for="attendanceStudentSelect">Student</label>
+        <select id="attendanceStudentSelect"></select>
+        <button type="button" class="secondary-btn" id="attendanceExportBtn">Export report</button>
+    </div>
+
+    <div class="attendance-summary">
+        <div class="attendance-big">
+            <span>Overall Attendance</span>
+            <strong id="overallAttendance">0%</strong>
+            <div class="progress"><div id="overallAttendanceProgress" style="width:0%"></div></div>
+            <small id="overallAttendanceStatus">No attendance records</small>
+        </div>
+        <div class="attendance-info">
+            <div><strong id="attendancePresentCount">0</strong><span>Present</span></div>
+            <div><strong id="attendanceAbsentCount">0</strong><span>Absent</span></div>
+            <div><strong id="attendanceClassCount">0</strong><span>Total classes</span></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div><h3>Course Attendance</h3><p id="attendanceCourseCaption">Present, absent, and total classes for each course.</p></div>
+        </div>
+        <div id="attendanceList"></div>
+        <div id="attendanceEmptyState" class="attendance-empty" hidden>No active courses are available for this student.</div>
+    </div>
+
+    <div class="modal-overlay" id="attendanceModal" role="dialog" aria-modal="true" aria-labelledby="attendanceModalTitle">
+        <div class="modal attendance-modal">
+            <div class="modal-header">
+                <h2 id="attendanceModalTitle">Record Attendance</h2>
+                <button type="button" data-close-modal="attendanceModal" aria-label="Close attendance form">×</button>
+            </div>
+            <p id="attendanceModalCourse" class="attendance-modal-course"></p>
+            <form id="attendanceForm">
+                <input type="hidden" id="attendanceStudentId">
+                <input type="hidden" id="attendanceCourseId">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="attendanceDate">Class date</label>
+                        <input id="attendanceDate" type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendanceStatusSelect">Attendance status</label>
+                        <select id="attendanceStatusSelect" required>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="secondary-btn" data-close-modal="attendanceModal">Cancel</button>
+                    <button type="submit" class="primary-btn">Save Attendance</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

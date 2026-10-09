@@ -1,0 +1,64 @@
+<section class="page-section active" id="fees">
+    <div class="section-header">
+        <div>
+            <h2 id="feesHeading">My Fees</h2>
+            <p id="feesDescription">Review your fee balance and payment history.</p>
+        </div>
+    </div>
+
+    <div id="feesAdminControls" class="fees-controls" hidden>
+        <label for="feesStudentSelect">Student</label>
+        <select id="feesStudentSelect"></select>
+    </div>
+
+    <div class="fee-grid">
+        <div class="fee-card"><span>Total Fee</span><strong id="feeTotal">—</strong></div>
+        <div class="fee-card"><span>Paid</span><strong id="feePaid">—</strong></div>
+        <div class="fee-card"><span>Remaining</span><strong id="feeRemaining">—</strong></div>
+        <div class="fee-card"><span>Status</span><strong id="feeStatus">—</strong></div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h3>Payment History</h3>
+                <p id="feesStudentCaption">Your recorded fee payments.</p>
+            </div>
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Date</th><th>Description</th><th>Amount</th><th>Status</th></tr>
+                </thead>
+                <tbody id="feePaymentsTable"></tbody>
+            </table>
+        </div>
+        <p id="feesEmptyState" class="fees-empty" hidden>No payments have been recorded for this student.</p>
+    </div>
+
+    <div id="feePaymentManagement" class="card fee-payment-management" hidden>
+        <div class="card-header">
+            <div>
+                <h3>Record a Payment</h3>
+                <p>Add a payment received from the selected student.</p>
+            </div>
+        </div>
+        <form id="feePaymentForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="feePaymentDate">Payment date</label>
+                    <input id="feePaymentDate" type="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="feePaymentDescription">Description</label>
+                    <input id="feePaymentDescription" type="text" maxlength="100" placeholder="e.g. Semester fee installment" required>
+                </div>
+                <div class="form-group">
+                    <label for="feePaymentAmount">Amount (Rs.)</label>
+                    <input id="feePaymentAmount" type="number" min="1" step="1" required>
+                </div>
+            </div>
+            <button type="submit" class="primary-btn">Save Payment</button>
+        </form>
+    </div>
+</section>
